@@ -24,9 +24,12 @@
 
 package me.ksviety.cacti.text
 
+import me.ksviety.cacti.Numeric
 import me.ksviety.cacti.Stringifiable
 
 class Text(private val value: String) : Stringifiable {
+
+	constructor(number: Numeric) : this(number.convertToDouble().toString())
 
 	override fun stringify(): String {
 		return value

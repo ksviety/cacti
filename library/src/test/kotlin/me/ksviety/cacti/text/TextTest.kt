@@ -24,14 +24,16 @@
 
 package me.ksviety.cacti.text
 
+import me.ksviety.cacti.math.Number
 import java.util.*
+import kotlin.random.Random
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class TextTest {
 
 	@Test
-	private fun `test exposed string is equal to origin`() {
+	fun `test exposed string is equal to origin`() {
 		val origin = UUID.randomUUID().toString()
 		val text = Text(origin)
 
@@ -39,5 +41,12 @@ class TextTest {
 			origin, text.stringify(),
 			"Must return the same text as passed in constructor"
 		)
+	}
+
+	@Test
+	fun `test stringifies numbers correctly`() {
+		val number = Number(Random.nextDouble())
+
+		assertEquals(number.convertToDouble().toString(), Text(number).stringify())
 	}
 }
