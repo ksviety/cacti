@@ -24,25 +24,24 @@
 
 package me.ksviety.cacti.text
 
-import kotlin.test.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertFails
+import me.ksviety.cacti.Stringifiable
+import me.ksviety.cacti.exceptions.StringificationException
+import kotlin.jvm.Throws
 
-class ChompedTest {
+class Chopped(private val origin: Stringifiable) : Stringifiable {
 
-	@Test
-	fun `test fails when origin is empty`() {
-		val origin = Text("")
-		val chomped = Chomped(origin)
+	@Throws(StringificationException::class)
+	override fun stringify(): String {
+		val origin = origin.stringify()
 
-		assertFails("Must fail when origin is empty", chomped::stringify)
-	}
+		if (origin.length == 0) {
+			throw StringificationException(
+				IllegalArgumentException(
+					"The original object was stringified into an empty String"
+				)
+			)
+		}
 
-	@Test
-	fun `test takes the last character only`() {
-		val original = "Abc"
-		val chompedOriginal = "Ab"
-
-		assertEquals(chompedOriginal, Chomped(Text(original)).stringify())
+		return origin.substring(0 until origin.lastIndex)
 	}
 }
