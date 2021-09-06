@@ -25,18 +25,13 @@
 package me.ksviety.cacti.math
 
 import me.ksviety.cacti.Numeric
-import me.ksviety.cacti.Stringifiable
 import kotlin.Number as KotlinNumber
 
-class Number(private val value: Double) : Numeric, Stringifiable {
+class Number(private val value: Double) : Numeric {
 
 	constructor(value: KotlinNumber) : this(value.toDouble())
 
 	override fun convertToDouble(): Double {
 		return value
-	}
-
-	override fun stringify(): String {
-		return value.toString()
 	}
 }
