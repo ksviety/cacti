@@ -24,9 +24,11 @@
 
 package me.ksviety.cacti.math
 
+import me.ksviety.cacti.text.Text
 import kotlin.random.Random
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 
 class NumberTest {
 
@@ -39,5 +41,21 @@ class NumberTest {
 		assertEquals(float, Number(float).convertToDouble().toFloat())
 		assertEquals(double, Number(double).convertToDouble())
 		assertEquals(int, Number(int).convertToDouble().toInt())
+	}
+
+	@Test
+	fun `test number parses text`() {
+		val originalNumber = Random.nextDouble()
+
+		assertEquals(originalNumber, Number(Text(Number(originalNumber))).convertToDouble())
+	}
+
+	@Test
+	fun `test fails with invalid string`() {
+		val nonumberText = Text("Not A Number")
+
+		assertFailsWith(NumberFormatException::class) {
+			Number(nonumberText)
+		}
 	}
 }

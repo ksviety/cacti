@@ -25,11 +25,19 @@
 package me.ksviety.cacti.math
 
 import me.ksviety.cacti.Numeric
+import me.ksviety.cacti.Stringifiable
 import kotlin.Number as KotlinNumber
 
 class Number(private val value: Double) : Numeric {
 
 	constructor(value: KotlinNumber) : this(value.toDouble())
+
+	/**
+	 * Parses number from text
+	 *
+	 * @throws NumberFormatException if the text is not a number
+	 */
+	constructor(text: Stringifiable) : this(text.stringify().toDouble())
 
 	override fun convertToDouble(): Double {
 		return value
