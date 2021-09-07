@@ -30,18 +30,19 @@ import me.ksviety.cacti.math.arithmetic.Difference
 import me.ksviety.cacti.math.arithmetic.Product
 import me.ksviety.cacti.math.arithmetic.Sum
 
-class LinearSample(private val start: Numeric, private val end: Numeric, private val factor: Numeric) : Numeric {
+class LinearSample(start: Numeric, end: Numeric, factor: Numeric) : Numeric {
+	private val value = Sum(
+		Product(
+			start,
+			Difference(
+				Number(1),
+				factor
+			)
+		),
+		Product(end, factor)
+	)
 
 	override fun convertToDouble(): Double {
-		return Sum(
-			Product(
-				start,
-				Difference(
-					Number(1),
-					factor
-				)
-			),
-			Product(end, factor)
-		).convertToDouble()
+		return value.convertToDouble()
 	}
 }
