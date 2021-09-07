@@ -32,12 +32,14 @@ class JoinedTest {
 
 	@Test
 	fun `test joins strings correctly`() {
-		val sources = Array(minOf(Random().nextInt(10), 2)) {
-			UUID.randomUUID().toString()
-		}
+		val left = UUID.randomUUID().toString()
+		val right = UUID.randomUUID().toString()
 
-		val joined = Joined(sources.map { Text(it) })
+		val joined = Joined(
+			Text(left),
+			Text(right)
+		)
 
-		assertEquals(sources.reduce { acc, s -> acc + s }, joined.stringify())
+		assertEquals(left + right, joined.stringify())
 	}
 }

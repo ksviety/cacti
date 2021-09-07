@@ -26,17 +26,9 @@ package me.ksviety.cacti.text
 
 import me.ksviety.cacti.Stringifiable
 
-class Joined(private val sources: Iterable<Stringifiable>) : Stringifiable {
-
-	constructor(vararg sources: Stringifiable) : this(sources.toList())
+class Joined(private val left: Stringifiable, private val right: Stringifiable) : Stringifiable {
 
 	override fun stringify(): String {
-		val builder = StringBuilder()
-
-		for (source in sources) {
-			builder.append(source.stringify())
-		}
-
-		return builder.toString()
+		return left.stringify() + right.stringify()
 	}
 }
