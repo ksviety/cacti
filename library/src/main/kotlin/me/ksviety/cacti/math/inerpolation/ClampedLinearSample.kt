@@ -27,17 +27,10 @@ package me.ksviety.cacti.math.inerpolation
 import me.ksviety.cacti.Numeric
 import me.ksviety.cacti.math.Clamped
 
-class ClampedLinearSample(private val start: Numeric, private val end: Numeric, private val factor: Numeric) : Numeric {
+class ClampedLinearSample(start: Numeric, end: Numeric, factor: Numeric) : Numeric {
+	private val value: Numeric = Clamped(LinearSample(start, end, factor), start, end)
 
 	override fun convertToDouble(): Double {
-		return Clamped(
-			LinearSample(
-				start,
-				end,
-				factor
-			),
-			start,
-			end
-		).convertToDouble()
+		return value.convertToDouble()
 	}
 }
