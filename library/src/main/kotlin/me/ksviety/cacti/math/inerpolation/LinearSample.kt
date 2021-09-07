@@ -25,6 +25,7 @@
 package me.ksviety.cacti.math.inerpolation
 
 import me.ksviety.cacti.Numeric
+import me.ksviety.cacti.math.Clamped as ClampedValue
 import me.ksviety.cacti.math.Number
 import me.ksviety.cacti.math.arithmetic.Difference
 import me.ksviety.cacti.math.arithmetic.Product
@@ -44,5 +45,13 @@ class LinearSample(start: Numeric, end: Numeric, factor: Numeric) : Numeric {
 
 	override fun convertToDouble(): Double {
 		return value.convertToDouble()
+	}
+
+	class Clamped(start: Numeric, end: Numeric, factor: Numeric) : Numeric {
+		private val value = ClampedValue(LinearSample(start, end, factor), start, end)
+
+		override fun convertToDouble(): Double {
+			return value.convertToDouble()
+		}
 	}
 }

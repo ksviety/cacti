@@ -45,4 +45,20 @@ class LinearSampleTest {
 			).convertToDouble()
 		)
 	}
+
+	@Test
+	fun `test clamped linear sample`() {
+		val min = 0
+		val max = 10.0
+		val factor = 5.0
+
+		assertEquals(
+			max,
+			LinearSample.Clamped(
+				Number(min),
+				Number(max),
+				Number(factor),
+			).convertToDouble()
+		)
+	}
 }
