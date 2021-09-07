@@ -28,14 +28,12 @@ import me.ksviety.cacti.Numeric
 import me.ksviety.cacti.math.comparison.Maximum
 import me.ksviety.cacti.math.comparison.Minimum
 
-class Clamped(private val value: Numeric, private val minimum: Numeric, private val maximum: Numeric) : Numeric {
+class Clamped(value: Numeric, minimum: Numeric, maximum: Numeric) : Numeric {
+	private val value: Numeric = Minimum(maximum, Maximum(value, minimum))
 
 	constructor(value: Numeric, maximum: Numeric) : this(value, Number(0), maximum)
 
 	override fun convertToDouble(): Double {
-		return Minimum(
-			maximum,
-			Maximum(value, minimum)
-		).convertToDouble()
+		return value.convertToDouble()
 	}
 }
