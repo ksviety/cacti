@@ -24,7 +24,7 @@
 
 package me.ksviety.cacti.math.comparison
 
-import me.ksviety.cacti.Numeric
+import me.ksviety.cacti.core.Numeric
 import kotlin.math.min
 
 class Minimum(private val first: Numeric, private val second: Numeric) : Numeric {
