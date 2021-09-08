@@ -24,7 +24,7 @@
 
 package me.ksviety.cacti.math.inerpolation
 
-import me.ksviety.cacti.Numeric
+import me.ksviety.cacti.core.Numeric
 import me.ksviety.cacti.math.Clamped as ClampedValue
 import me.ksviety.cacti.math.Number
 import me.ksviety.cacti.math.arithmetic.Difference
