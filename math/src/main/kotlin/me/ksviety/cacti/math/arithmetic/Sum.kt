@@ -24,7 +24,7 @@
 
 package me.ksviety.cacti.math.arithmetic
 
-import me.ksviety.cacti.Numeric
+import me.ksviety.cacti.core.Numeric
 
 class Sum(private val left: Numeric, private val right: Numeric) : Numeric {
 

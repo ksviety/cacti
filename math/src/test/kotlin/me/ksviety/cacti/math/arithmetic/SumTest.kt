@@ -24,7 +24,7 @@
 
 package me.ksviety.cacti.math.arithmetic
 
-import me.ksviety.cacti.Numeric
+import me.ksviety.cacti.core.Numeric
 import me.ksviety.cacti.math.Number
 import kotlin.random.Random
 import kotlin.test.Test
