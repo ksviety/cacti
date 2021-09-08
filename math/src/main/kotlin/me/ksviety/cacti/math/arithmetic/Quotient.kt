@@ -24,7 +24,7 @@
 
 package me.ksviety.cacti.math.arithmetic
 
-import me.ksviety.cacti.Numeric
+import me.ksviety.cacti.core.Numeric
 
 class Quotient(private val dividend: Numeric, private val divider: Numeric) : Numeric {
 
