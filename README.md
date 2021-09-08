@@ -88,18 +88,6 @@ val result: Numeric = Maximum(
 ) // 5
 ```
 
-## Text
-
-To create a `Stringifiable` object from `String`
-```kotlin
-val text: Stringifiable = Text("foo")
-```
-
-To create a `Stringifiable` object from numbers 
-```kotlin
-val text: Stringifiable = Text(Number(256))
-```
-
 ## Questions
 
 Ask your questions related to cacti library on [Stackoverflow](https://stackoverflow.com/questions/ask) with `kotlin-cacti` tag.
