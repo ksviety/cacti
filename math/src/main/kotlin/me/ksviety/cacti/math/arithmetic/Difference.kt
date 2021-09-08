@@ -24,7 +24,7 @@
 
 package me.ksviety.cacti.math.arithmetic
 
-import me.ksviety.cacti.Numeric
+import me.ksviety.cacti.core.Numeric
 
 class Difference(private val minuend: Numeric, private val subtrahend: Numeric) : Numeric {
 
