@@ -22,7 +22,7 @@
  * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package me.ksviety.cacti
+package me.ksviety.cacti.core
 
 interface Stringifiable {
 
