@@ -42,6 +42,6 @@ class SumTest {
 			Number(right)
 		)
 
-		assertEquals(left + right, sum.convertToDouble())
+		assertEquals(left + right, sum.collapse())
 	}
 }

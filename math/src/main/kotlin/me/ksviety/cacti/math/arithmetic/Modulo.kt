@@ -28,7 +28,7 @@ import me.ksviety.cacti.core.Numeric
 
 class Modulo(private val dividend: Numeric, private val divider: Numeric) : Numeric {
 
-	override fun convertToDouble(): Double {
-		return dividend.convertToDouble() % divider.convertToDouble()
+	override fun collapse(): Double {
+		return dividend.collapse() % divider.collapse()
 	}
 }

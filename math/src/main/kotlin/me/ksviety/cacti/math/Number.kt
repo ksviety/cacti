@@ -31,7 +31,7 @@ class Number(private val value: Double) : Numeric {
 
 	constructor(value: KotlinNumber) : this(value.toDouble())
 
-	override fun convertToDouble(): Double {
+	override fun collapse(): Double {
 		return value
 	}
 }

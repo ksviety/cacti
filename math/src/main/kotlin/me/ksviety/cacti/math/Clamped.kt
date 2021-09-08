@@ -33,7 +33,7 @@ class Clamped(value: Numeric, minimum: Numeric, maximum: Numeric) : Numeric {
 
 	constructor(value: Numeric, maximum: Numeric) : this(value, Number(0), maximum)
 
-	override fun convertToDouble(): Double {
-		return value.convertToDouble()
+	override fun collapse(): Double {
+		return value.collapse()
 	}
 }

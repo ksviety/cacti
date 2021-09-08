@@ -29,10 +29,10 @@ import kotlin.math.min
 
 class Minimum(private val first: Numeric, private val second: Numeric) : Numeric {
 
-	override fun convertToDouble(): Double {
+	override fun collapse(): Double {
 		return min(
-			first.convertToDouble(),
-			second.convertToDouble()
+			first.collapse(),
+			second.collapse()
 		)
 	}
 }

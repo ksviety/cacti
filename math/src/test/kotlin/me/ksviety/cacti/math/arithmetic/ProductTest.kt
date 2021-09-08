@@ -41,6 +41,6 @@ class ProductTest {
 			Number(multiplier)
 		)
 
-		assertEquals(multiplicand * multiplier, product.convertToDouble())
+		assertEquals(multiplicand * multiplier, product.collapse())
 	}
 }

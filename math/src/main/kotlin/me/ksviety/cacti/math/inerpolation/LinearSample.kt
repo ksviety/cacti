@@ -43,15 +43,15 @@ class LinearSample(start: Numeric, end: Numeric, factor: Numeric) : Numeric {
 		Product(end, factor)
 	)
 
-	override fun convertToDouble(): Double {
-		return value.convertToDouble()
+	override fun collapse(): Double {
+		return value.collapse()
 	}
 
 	class Clamped(start: Numeric, end: Numeric, factor: Numeric) : Numeric {
 		private val value = ClampedValue(LinearSample(start, end, factor), start, end)
 
-		override fun convertToDouble(): Double {
-			return value.convertToDouble()
+		override fun collapse(): Double {
+			return value.collapse()
 		}
 	}
 }

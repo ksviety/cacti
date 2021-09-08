@@ -41,6 +41,6 @@ class DifferenceTest {
 			Number(right)
 		)
 
-		assertEquals(left - right, difference.convertToDouble())
+		assertEquals(left - right, difference.collapse())
 	}
 }

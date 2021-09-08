@@ -28,7 +28,7 @@ import me.ksviety.cacti.core.Numeric
 
 class Difference(private val minuend: Numeric, private val subtrahend: Numeric) : Numeric {
 
-	override fun convertToDouble(): Double {
-		return minuend.convertToDouble() - subtrahend.convertToDouble()
+	override fun collapse(): Double {
+		return minuend.collapse() - subtrahend.collapse()
 	}
 }

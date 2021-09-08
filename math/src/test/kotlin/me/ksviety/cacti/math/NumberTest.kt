@@ -36,8 +36,8 @@ class NumberTest {
 		val double = Random.nextDouble()
 		val int = Random.nextInt()
 
-		assertEquals(float, Number(float).convertToDouble().toFloat())
-		assertEquals(double, Number(double).convertToDouble())
-		assertEquals(int, Number(int).convertToDouble().toInt())
+		assertEquals(float, Number(float).collapse().toFloat())
+		assertEquals(double, Number(double).collapse())
+		assertEquals(int, Number(int).collapse().toInt())
 	}
 }

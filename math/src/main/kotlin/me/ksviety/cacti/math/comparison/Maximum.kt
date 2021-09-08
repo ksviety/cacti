@@ -29,10 +29,10 @@ import kotlin.math.max
 
 class Maximum(private val first: Numeric, private val second: Numeric) : Numeric {
 
-	override fun convertToDouble(): Double {
+	override fun collapse(): Double {
 		return max(
-			first.convertToDouble(),
-			second.convertToDouble()
+			first.collapse(),
+			second.collapse()
 		)
 	}
 }

@@ -34,7 +34,7 @@ class ClampedTest {
 		val max = 10.0
 		val min = 5.0
 
-		assertEquals(max, Clamped(Number(15), Number(min), Number(max)).convertToDouble())
+		assertEquals(max, Clamped(Number(15), Number(min), Number(max)).collapse())
 	}
 
 	@Test
@@ -42,7 +42,7 @@ class ClampedTest {
 		val max = 10.0
 		val min = 5.0
 
-		assertEquals(min, Clamped(Number(3), Number(min), Number(max)).convertToDouble())
+		assertEquals(min, Clamped(Number(3), Number(min), Number(max)).collapse())
 	}
 
 	@Test
@@ -51,6 +51,6 @@ class ClampedTest {
 		val min = 5.0
 		val value = 7.0
 
-		assertEquals(value, Clamped(Number(value), Number(min), Number(max)).convertToDouble())
+		assertEquals(value, Clamped(Number(value), Number(min), Number(max)).collapse())
 	}
 }

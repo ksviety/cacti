@@ -41,6 +41,6 @@ class ModuloTest {
 			Number(divider)
 		)
 
-		assertEquals(dividend % divider, modulo.convertToDouble())
+		assertEquals(dividend % divider, modulo.collapse())
 	}
 }

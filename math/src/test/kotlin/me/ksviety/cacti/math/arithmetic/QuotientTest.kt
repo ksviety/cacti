@@ -41,6 +41,6 @@ class QuotientTest {
 			Number(divider)
 		)
 
-		assertEquals(dividend / divider, quotient.convertToDouble())
+		assertEquals(dividend / divider, quotient.collapse())
 	}
 }

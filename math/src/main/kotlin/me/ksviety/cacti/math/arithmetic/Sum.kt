@@ -28,7 +28,7 @@ import me.ksviety.cacti.core.Numeric
 
 class Sum(private val left: Numeric, private val right: Numeric) : Numeric {
 
-	override fun convertToDouble(): Double {
-		return left.convertToDouble() + right.convertToDouble()
+	override fun collapse(): Double {
+		return left.collapse() + right.collapse()
 	}
 }

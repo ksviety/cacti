@@ -41,6 +41,6 @@ class MaximumTest {
 			Number(higher)
 		)
 
-		assertEquals(higher, maximum.convertToDouble())
+		assertEquals(higher, maximum.collapse())
 	}
 }

@@ -31,5 +31,5 @@ interface Numeric {
 	 *
 	 * @return This object presented as Double
 	 */
-	fun convertToDouble(): Double
+	fun collapse(): Double
 }

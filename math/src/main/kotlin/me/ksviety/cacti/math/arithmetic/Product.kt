@@ -28,7 +28,7 @@ import me.ksviety.cacti.core.Numeric
 
 class Product(private val multiplicand: Numeric, private val multiplier: Numeric) : Numeric {
 
-	override fun convertToDouble(): Double {
-		return multiplicand.convertToDouble() * multiplier.convertToDouble()
+	override fun collapse(): Double {
+		return multiplicand.collapse() * multiplier.collapse()
 	}
 }

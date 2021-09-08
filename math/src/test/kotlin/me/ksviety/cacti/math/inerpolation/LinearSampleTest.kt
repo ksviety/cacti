@@ -42,7 +42,7 @@ class LinearSampleTest {
 				Number(min),
 				Number(max),
 				Number(factor),
-			).convertToDouble()
+			).collapse()
 		)
 	}
 
@@ -58,7 +58,7 @@ class LinearSampleTest {
 				Number(min),
 				Number(max),
 				Number(factor),
-			).convertToDouble()
+			).collapse()
 		)
 	}
 }

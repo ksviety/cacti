@@ -41,6 +41,6 @@ class MinimumTest {
 			Number(higher)
 		)
 
-		assertEquals(lower, minimum.convertToDouble())
+		assertEquals(lower, minimum.collapse())
 	}
 }
