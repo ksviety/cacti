@@ -1,3 +1,4 @@
 rootProject.name = "cacti"
 
-include("library")
+include("core")
+include("math")
