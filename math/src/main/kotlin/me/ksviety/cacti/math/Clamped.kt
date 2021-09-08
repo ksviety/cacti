@@ -24,7 +24,7 @@
 
 package me.ksviety.cacti.math
 
-import me.ksviety.cacti.Numeric
+import me.ksviety.cacti.core.Numeric
 import me.ksviety.cacti.math.comparison.Maximum
 import me.ksviety.cacti.math.comparison.Minimum
 
